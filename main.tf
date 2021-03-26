@@ -33,7 +33,7 @@ resource "random_password" "password" {
   override_special = "_%@"
 }
 
-resource "azurerm_linux_virtual_machine_scale_set" "example" {
+resource "azurerm_linux_virtual_machine_scale_set" "ado-vmss" {
   name                = "ado-vmss"
   resource_group_name = data.azurerm_resource_group.project-rg.name
   location            = local.location
@@ -45,7 +45,7 @@ resource "azurerm_linux_virtual_machine_scale_set" "example" {
   source_image_reference {
     publisher = "Canonical"
     offer     = "UbuntuServer"
-    sku       = "20.04-LTS"
+    sku       = "18.04-LTS"
     version   = "latest"
   }
 
