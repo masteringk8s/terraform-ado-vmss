@@ -12,5 +12,4 @@ variable "location" {
 
 variable "prefix" {
   type                      = string
-  default                   = "5058"
   description               = "prefix to use for infra"
