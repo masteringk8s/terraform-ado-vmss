@@ -3,6 +3,10 @@
 terraform {
   required_providers {
     azurerm = {
+      storage_account_name = "tfstate5058sa"
+      container_name = "tfstate"
+      key = "terraform.tfstate"
+
       source  = "hashicorp/azurerm"
       version = "=2.46.0"
     }
