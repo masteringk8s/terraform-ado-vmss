@@ -34,13 +34,14 @@ resource "random_password" "password" {
 }
 
 resource "azurerm_linux_virtual_machine_scale_set" "ado-vmss" {
-  name                = "ado-vmss"
-  resource_group_name = data.azurerm_resource_group.project-rg.name
-  location            = local.location
-  sku                 = local.vmsize 
-  instances           = 1
-  admin_username      = "adminuser"
-  admin_password      = random_password.password.result
+  name                            = "ado-vmss"
+  resource_group_name             = data.azurerm_resource_group.project-rg.name
+  location                        = local.location
+  sku                             = local.vmsize 
+  instances                       = 1
+  admin_username                  = "adminuser"
+  admin_password                  = random_password.password.result
+  disable_password_authentication = false
 
   source_image_reference {
     publisher = "Canonical"
