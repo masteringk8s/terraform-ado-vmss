@@ -13,3 +13,4 @@ variable "location" {
 variable "prefix" {
   type                      = string
   description               = "prefix to use for infra"
+}
