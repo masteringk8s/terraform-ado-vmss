@@ -14,7 +14,7 @@ locals {
 # Create a Virtual Network within the Resource Group
 resource "azurerm_virtual_network" "ado-vnet" {
   name                = "${local.prefix}-ado-vnet"
-  address_space       = ["10.100.1.0/16"]
+  address_space       = ["10.100.0.0/16"]
   resource_group_name = data.azurerm_resource_group.project-rg.name
   location            = local.location 
 }
