@@ -9,3 +9,8 @@ variable "location" {
   default                   = "eastus"
   description               = "The Azure Region used"
 }
+
+variable "prefix" {
+  type                      = string
+  default                   = "5058"
+  description               = "prefix to use for infra"
