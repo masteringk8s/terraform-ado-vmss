@@ -22,7 +22,7 @@ resource "azurerm_virtual_network" "ado-vnet" {
 # Create a Subnet within the Virtual Network
 resource "azurerm_subnet" "internal" {
   name                 = "${local.prefix}-subnet-ado"
-  virtual_network_name = azurerm_virtual_network.main.name
+  virtual_network_name = azurerm_virtual_network.ado-vnet.name
   resource_group_name  = data.azurerm_resource_group.project-rg.name
   address_prefix       = "10.100.1.0/24"
 }
@@ -35,7 +35,7 @@ resource "random_password" "password" {
 
 resource "azurerm_linux_virtual_machine_scale_set" "example" {
   name                = "ado-vmss"
-  resource_group_name = data.azurerm_resource_group.project.rg.name
+  resource_group_name = data.azurerm_resource_group.project-rg.name
   location            = local.location
   sku                 = local.vmsize 
   instances           = 1
