@@ -1,5 +1,6 @@
 variable "vmsize" {
   type                      = string
+  default                   = "Standard_B1ms"
   description               = "Size of VM to create"
 }
 

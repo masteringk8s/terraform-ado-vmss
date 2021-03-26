@@ -3,7 +3,7 @@ locals {
   # added as locals here 
   prefix                = var.prefix
   location              = var.location
-  vmsize                = "Standard_${var.vmsize}"
+  vmsize                = var.vmsize
   
   # Common tags should go here
   tags           = {
