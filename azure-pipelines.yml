@@ -41,7 +41,6 @@ jobs:
     displayName: 'Login az cli'
 
   - script: |
-      set -x
       export ARM_CLIENT_ID=$(sp-client-id-tf-5058)
       export ARM_CLIENT_SECRET=$(sp-password-tf-5058)
       export ARM_SUBSCRIPTION_ID=$(sp-subscription-id-tf-5058)
