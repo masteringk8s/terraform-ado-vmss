@@ -8,11 +8,6 @@ variable "location" {
   description               = "The Azure Region used"
 }
 
-variable "prefix" {
-  type                      = string
-  description               = "prefix to use for infra"
-}
-
 variable "project-rg" {
   type                      = string
   description               = "Resource group for project"

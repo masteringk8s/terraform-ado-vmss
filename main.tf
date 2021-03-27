@@ -1,7 +1,6 @@
 locals {
   # All variables used in this file should be 
   # added as locals here 
-  prefix                = var.prefix
   location              = var.location
   vmsize                = var.vmsize
   
@@ -13,7 +12,7 @@ locals {
 
 # Create a Virtual Network within the Resource Group
 resource "azurerm_virtual_network" "ado-vnet" {
-  name                = "${local.prefix}-ado-vnet"
+  name                = "ado-vnet"
   address_space       = ["10.100.0.0/16"]
   resource_group_name = data.azurerm_resource_group.project-rg.name
   location            = local.location 
@@ -21,7 +20,7 @@ resource "azurerm_virtual_network" "ado-vnet" {
 
 # Create a Subnet within the Virtual Network
 resource "azurerm_subnet" "internal" {
-  name                 = "${local.prefix}-subnet-ado"
+  name                 = "subnet-ado"
   virtual_network_name = azurerm_virtual_network.ado-vnet.name
   resource_group_name  = data.azurerm_resource_group.project-rg.name
   address_prefix       = "10.100.1.0/24"
