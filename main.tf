@@ -41,10 +41,10 @@ resource "azurerm_linux_virtual_machine_scale_set" "ado-vmss" {
   admin_username                  = "adminuser"
   admin_password                  = random_password.password.result
   disable_password_authentication = false
-
-  source_image_reference {
-   id = data.azurerm_image.agent-image.id
-  }
+  source_image_id                 = data.azurerm_image.agent-image.id 
+  # source_image_reference {
+  #  id = data.azurerm_image.agent-image.id
+  # }
 
   os_disk {
     storage_account_type = "Standard_LRS"
