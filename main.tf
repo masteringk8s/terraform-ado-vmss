@@ -43,7 +43,7 @@ resource "azurerm_linux_virtual_machine_scale_set" "ado-vmss" {
   disable_password_authentication = false
 
   source_image_reference {
-   id = data.azurerm_image.agent-image.id;
+   id = data.azurerm_image.agent-image.id
   }
 
   os_disk {
