@@ -1,6 +1,6 @@
 data "azurerm_client_config" "current" {}
 
-data "azurerm_image" "agent-img" {
+data "azurerm_image" "agent-image" {
   name                = var.agent-image
   resource_group_name = var.agent-image-rg
 }
