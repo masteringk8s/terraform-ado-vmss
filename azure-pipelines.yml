@@ -6,7 +6,7 @@ trigger: none
 pr: none
 
 jobs:
-- job: ado-vmss-creation
+- job: adovmsscreation
   timeoutInMinutes: 0
   #pool: ado-vm-peer
   pool:
