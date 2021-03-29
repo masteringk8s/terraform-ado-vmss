@@ -6,7 +6,7 @@ trigger: none
 pr: none
 
 jobs:
-- job: iac
+- job: ado-vmss-creation
   timeoutInMinutes: 0
   #pool: ado-vm-peer
   pool:
@@ -25,8 +25,8 @@ jobs:
   #KEY VAULT TASK
   - task: AzureKeyVault@1
     inputs:
-      azureSubscription: 'PROJECT-5058'
-      KeyVaultName: 'project-keyvault-5058'
+      azureSubscription: 'PROJECT-EBM'
+      KeyVaultName: 'project-secrets-ebm-kv'
       SecretsFilter: 'SP-CLIENTID,SP-PASSWORD,SP-TENANTID,SP-SUBSCRIPTIONID,SA-ACCESS-KEY'
     displayName: 'Get key vault secrets'
 
