@@ -1,5 +1,5 @@
-project-rg    = "PROJECT-5058-RG"
+project-rg    = "PROJECT-2429-RG"
 location      = "eastus"
 vmsize        = "Standard_B1ms"
-agent-image   = "myAdoAgentImg-738f6b2"
-agent-image-rg= "PROJECT-5058-RG"
+agent-image   = "myAdoAgentImg-8d4d591"
+agent-image-rg= "PROJECT-2429-RG"
