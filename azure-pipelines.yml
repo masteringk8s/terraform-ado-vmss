@@ -25,7 +25,7 @@ jobs:
   #KEY VAULT TASK
   - task: AzureKeyVault@1
     inputs:
-      azureSubscription: 'PROJECT-EBM'
+      azureSubscription: 'SERVICE-2429'
       KeyVaultName: '$(AZURE_KEYVAULT_NAME)'
       SecretsFilter: 'SP-CLIENTID,SP-PASSWORD,SP-TENANTID,SP-SUBSCRIPTIONID,SA-ACCESS-KEY'
     displayName: 'Get key vault secrets'
